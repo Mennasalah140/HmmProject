@@ -1,26 +1,30 @@
-Custom Memory Management Library
-This is a custom memory management library implemented in C, providing functions similar to malloc, free, calloc, and realloc. The library allows for dynamic memory allocation and deallocation with additional features such as alignment and memory optimization.
+# Custom Memory Management Library
 
-Features
-Dynamic Memory Allocation: Provides functions for allocating and deallocating memory dynamically.
-Alignment: Ensures that memory addresses are aligned to a specified size, improving performance and compatibility with certain architectures.
-Optimization: Optimizes memory usage by merging adjacent free memory blocks.
-Safety: Includes checks to handle edge cases and prevent memory leaks or segmentation faults.
-Functions
-void *malloc(size_t size): Allocates memory of the specified size.
-void free(void *ptr): Deallocates memory previously allocated by malloc, calloc, or realloc.
-void *calloc(size_t nmemb, size_t size): Allocates memory for an array of nmemb elements of size bytes each, initialized to zero.
-void *realloc(void *ptr, size_t size): Resizes the memory block pointed to by ptr to the specified size.
-Usage
-Include the header file myhmm.h in your C program.
-Link the library libmyhmm.a or libmyhmm.so with your program during compilation.For example:
-bash
-Copy code
-gcc my_program.c -o my_program -L/path/to/libmyhmm -lmyhmm
-Use the memory management functions (malloc, free, calloc, realloc) in your program as needed.
-Example
-c
-Copy code
+This is a custom memory management library implemented in C, providing functions similar to `malloc`, `free`, `calloc`, and `realloc`. The library allows for dynamic memory allocation and deallocation with additional features such as alignment and memory optimization.
+
+## Features
+
+- **Dynamic Memory Allocation**: Provides functions for allocating and deallocating memory dynamically.
+- **Alignment**: Ensures that memory addresses are aligned to a specified size, improving performance and compatibility with certain architectures.
+- **Optimization**: Optimizes memory usage by merging adjacent free memory blocks.
+- **Safety**: Includes checks to handle edge cases and prevent memory leaks or segmentation faults.
+
+## Functions
+
+- `void *malloc(size_t size)`: Allocates memory of the specified size.
+- `void free(void *ptr)`: Deallocates memory previously allocated by `malloc`, `calloc`, or `realloc`.
+- `void *calloc(size_t nmemb, size_t size)`: Allocates memory for an array of `nmemb` elements of `size` bytes each, initialized to zero.
+- `void *realloc(void *ptr, size_t size)`: Resizes the memory block pointed to by `ptr` to the specified `size`.
+
+## Usage
+
+1. **Include Header File**: Include the header file `myhmm.h` in your C program.
+2. **Link Library**: Link the library `libmyhmm.a` or `libmyhmm.so` with your program during compilation.
+3. **Use Functions**: Use the memory management functions (`malloc`, `free`, `calloc`, `realloc`) in your program as needed.
+
+## Example
+
+```c
 #include <stdio.h>
 #include "myhmm.h"
 
