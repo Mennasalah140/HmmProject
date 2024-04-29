@@ -154,11 +154,11 @@ void *HmmAlloc(size_t size)
 
     int x = size;
 
-    if (x < 16) {
+    if (x < sizeof(struct free_node *)) {
 
-	x = 16;
+        x += sizeof(struct free_node *);
 
-	size = 16;
+        size += sizeof(struct free_node *);
 
     }
 
